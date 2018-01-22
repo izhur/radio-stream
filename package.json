@@ -1,0 +1,23 @@
+{
+  "name": "radio-stream",
+  "version": "1.0.0",
+  "description": "radio streaming processor",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "icecast",
+    "shoutcast",
+    "processor"
+  ],
+  "author": "izhur2001@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "acoustid": "^1.2.1",
+    "fpcalc": "^1.1.1",
+    "icy": "^2.0.0",
+    "lame": "^1.2.3",
+    "speaker": "^0.2.6"
+  }
+}
