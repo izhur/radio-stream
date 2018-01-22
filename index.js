@@ -24,7 +24,7 @@ var streammeta = {};
 var fname = '';
 var interval = null;
 var timer = 0;
-var start = new Date().getTime();
+var start = Math.round(new Date().getTime()/1000);
 var regex = /.* \[(\d+)\]$/
 
 console.log(start);
@@ -68,17 +68,12 @@ function writeOutput(buffer) {
 }
 
 function caclTime(intime) {
-  var end = new Date().getTime();
+  var end = Math.round(new Date().getTime()/1000);
   var elapsed = end - start;
   start = end;
   console.log('elapsed',elapsed, end);
   return timer + elapsed;
 }
-
-var interval = setInterval(function() {
-  timer = timer+100;
-// console.log(timer);
-}, 100);
 
 // connect to the remote stream
 icy.get(url, function (res) {
